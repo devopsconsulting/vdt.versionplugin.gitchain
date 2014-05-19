@@ -15,10 +15,11 @@ def build_package(version):
 
     log.debug("Building version {0} with gitchain.".format(version))
     with version.checkout_tag:
+        cmd = ['git', 'push']
         if args.force:
-            cmd = ['git', 'push', '--force']
-        else:
-            cmd = ['git', 'push']
+            cmd.append('--force')
+        if args.tags:
+            cmd.append('--tags')
 
         cmd += [args.target_repo, "HEAD:{0}".format(args.target_ref)]
 
