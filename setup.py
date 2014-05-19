@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 pkgname = "vdt.versionplugin.gitchain"
 
 setup(name=pkgname,
-      version="0.0.1",
+      version="0.0.3",
       description="Instead of building packages as a freezed state, propagate tags between git repositories.",
       author="Lars van de Kerkhof",
       author_email="lars@permanentmarkers.nl",
